@@ -1,0 +1,83 @@
+nav {
+	min-width: 700px;
+	margin: auto;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.brand-logo {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.brand-logo > img {
+	width: 60px;
+	height: 60px;
+}
+
+.page-footer {
+	background-color: #394a1d;
+}
+
+.col > ul > li {
+	display: inline;
+}
+
+.page-footer > div > div> div > h5 {
+	font-size: 18px;
+}
+
+.tabs .tab a,
+.tabs .tab a:hover,
+.tabs .tab a.active {
+	font-size: 14px;
+	margin-top: 10px;
+	color: white;
+}
+
+#test1, 
+#test2, 
+#test3, 
+#test4 {
+	height: 1000px;
+	text-align: top;
+	padding-top: 100px;
+}
+#test1 {
+	position: relative;
+	top: 150px;
+	left: 0;
+	z-index: -1;
+}
+
+header {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	background-color: #aba87b;
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+a.active,
+.tab :hover {
+	border: none !important;
+	padding-bottom: 0x !important;
+	border-bottom: solid 1px white !important;
+}
+div.nav-wrapper {
+	min-height: 80px !important;
+}
+
+.tab {
+	height: 20px !important;
+}
+
+
+.tabs {
+	background-color: #aba87b !important;
+}
