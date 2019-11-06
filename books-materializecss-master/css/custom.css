@@ -29,7 +29,6 @@ nav {
 	border-radius: 50%;
 	height: 64px;
 	width: 64px;
-	pointer-events: none;
 }
 
 .scroll-down-buton {
@@ -68,7 +67,7 @@ nav {
 	position: relative;
 	top: 150px;
 	left: 0;
-	z-index: -1;
+	/*z-index: -1;*/
 	background-image: url("../images/background-main.png");
 	background-size: cover;
 	background-position: center center;
