@@ -77,7 +77,7 @@ nav {
 }
 
 #test1 > p {
-	font-family: 'Oswald Regular';
+	font-family: 'Oswald Light';
 }
 
 header {
@@ -86,6 +86,7 @@ header {
 	left:0;
 	width: 100%;
 	background-color: #aba87b;
+	z-index: 10;
 }
 footer {
 	position: fixed;
@@ -106,8 +107,54 @@ div.nav-wrapper {
 .tab {
 	height: 20px !important;
 }
-
-
 .tabs {
 	background-color: #aba87b !important;
+}
+#test2{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.listBooks__portada{
+	position: relative;
+	top: 70px;
+	float: left;
+	background-color: white;
+	width: 150px;
+	height: 200px;
+	margin: 0 5% 10px 5%;
+	-webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.79);
+	-moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.79);
+	box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.79);
+}
+.listBooks__portada > a > img{
+	position: absolute;
+	display: block;
+	max-width: 100%;
+	max-height: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+.statsTabs{
+	position: absolute;
+	top: 220px;
+}
+.statsTabs > li > a{
+	display: block;
+	text-align: center;
+	width: 150px !important;
+	height: 50px;
+	font-family: Oswald Light !important;
+	color: white;
+	font-size: 1.4em;
+	line-height: 100%;
+	text-align: center;
+	background-color: #aba87b;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	-webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.79);
+	-moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.79);
+	box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.79);
 }

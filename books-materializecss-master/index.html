@@ -10,6 +10,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://kit.fontawesome.com/9e4074d84f.js" crossorigin="anonymous"></script>
+    <script src="http://twitter.github.com/hogan.js/builds/3.0.1/hogan-3.0.1.js"></script>
   </head>
   <body>
     <header>
@@ -41,7 +42,56 @@
         <p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias expedita, hic delectus quaerat nam quasi, vero a, magni dolor dolorum soluta nobis enim! Harum laboriosam tempora ullam quam nobis nihil?</p>
         <span class="scroll-down-buton"><i class="fas fa-arrow-alt-circle-down fa-5x"></i></span>
       </section>
-      <section id="test2" class="section scrollspy">2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nihil commodi libero perferendis error, ullam dolorum dolore voluptas vero accusamus aliquid tenetur atque eaque, ad? Aspernatur amet officia aut! Pariatur?</section>
+      <section id="test2" class="section scrollspy">
+        <div id="contenedor" class="group"></div>
+        <script id="listBooksScript" type="text/x-hogan-template">
+          <div class="group">
+          <ul class="listBooks">
+              {{#books}}
+              <li class="listBooks__portada">
+                <a href="#" title="{{title}}">
+                   <img src="{{cover}}" alt="{{title}}" />
+                </a>
+                <ul class="statsTabs">
+                   <li>
+                      <a class="statsTabs__a" href="#">{{name}}
+                         <span class="statsTabs__span"></span>
+                      </a>
+                   </li>
+                </ul>
+             </li>
+             {{/books}}
+          </ul>
+          </div>    
+        </script>
+        <script>
+          var cont = document.getElementById("contenedor"),
+            data = {
+              books: [{
+                title: "книга1",
+                name: "тонкое искусство пофигизма",
+                cover: "images/book1.jpg"
+              }, {
+                title: "книга2",
+                name: "неизвестная книга",
+                cover: "images/library.png"
+              }, {
+                title: "книга3",
+                name: "людина розумна",
+                cover: "images/book2.jpg"
+              }, {
+                title: "книга4",
+                name: "неизвестная книга",
+                cover: "images/library.png"
+              }]
+            },
+            source = document.getElementById("listBooksScript").innerHTML,
+            template = Hogan.compile(source),
+            output = template.render(data);
+            console.log(output);
+            cont.innerHTML=output;
+        </script>
+        </section>
       <section id="test3" class="section scrollspy">3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem commodi quisquam perferendis ipsum soluta repudiandae ut harum voluptate assumenda, velit qui repellat totam, veritatis voluptatem aut voluptatibus cupiditate quas cum?</section>
       <section id="test4" class="section scrollspy">4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque assumenda maxime quo similique deserunt possimus nostrum eveniet et excepturi. Assumenda veniam consequuntur eveniet animi quidem eaque necessitatibus voluptas. Pariatur, veritatis.</section>
     <footer class="page-footer">
