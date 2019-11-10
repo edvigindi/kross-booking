@@ -39,29 +39,43 @@
 	      </ul>
     </header>
       <section id="test1" class="section scrollspy">
-        <p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias expedita, hic delectus quaerat nam quasi, vero a, magni dolor dolorum soluta nobis enim! Harum laboriosam tempora ullam quam nobis nihil?</p>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m5">
+              <h5 class="right-align caption">Домашняя библиотека -</h5>
+            </div>
+            <div class="col s12 m7">
+              <h5 class="left-align description">сообщество истинных ценителей литературы</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m7 offset-m5">
+              <h5 class="left-align description">Здесь  вы можете найти труд по душе  или поделиться книгой с другими читателями</h5>
+            </div>
+          </div>
+          </div>
         <span class="scroll-down-buton"><i class="fas fa-arrow-alt-circle-down fa-5x"></i></span>
       </section>
       <section id="test2" class="section scrollspy">
-        <div id="contenedor" class="group"></div>
+        <div id="contenedor" class="container"></div>
         <script id="listBooksScript" type="text/x-hogan-template">
-          <div class="group">
-          <ul class="listBooks">
+          <div class="row">
               {{#books}}
-              <li class="listBooks__portada">
-                <a href="#" title="{{title}}">
-                   <img src="{{cover}}" alt="{{title}}" />
-                </a>
-                <ul class="statsTabs">
-                   <li>
-                      <a class="statsTabs__a" href="#">{{name}}
-                         <span class="statsTabs__span"></span>
-                      </a>
-                   </li>
-                </ul>
-             </li>
+              <div class="col s12 m6 l4 xl3">
+                <div class="card">
+                  <div class="card-image">
+                    <a href="#">
+                       <img src="{{cover}}" alt="{{title}}" />
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <a href="#">
+                     <span class="card-title">{{name}}</span>
+                    </a>
+                  </div>
+                </div>
+             </div>
              {{/books}}
-          </ul>
           </div>    
         </script>
         <script>
@@ -101,7 +115,7 @@
             <h5 class="white-text">контакты</h5>
             <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
           </div>
-          <div class="col l4 offset-l2 s12">
+          <div class="col l4 offset-l2 s12 socials-col">
             <ul>
               <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-telegram fa-2x"></i></a></li>
               <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-vk fa-2x"></i></a></li>

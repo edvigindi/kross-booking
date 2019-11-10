@@ -22,16 +22,21 @@ nav {
 	height: 60px;
 }
 
+.caption {
+	font-size: 2.28rem;
+}
+
+.description {
+	margin-top: 1.4rem;
+}
+
 .scroll-down-buton {
 	position: absolute;
-	top: 80%;
+	top: 70%;
 	left: 50%;
 	border-radius: 50%;
 	height: 64px;
 	width: 64px;
-}
-
-.scroll-down-buton {
 	color: #aba87b;
 }
 
@@ -39,7 +44,7 @@ nav {
 	background-color: #394a1d;
 }
 
-.col > ul > li {
+.socials-col > ul > li {
 	display: inline;
 }
 
@@ -55,19 +60,35 @@ nav {
 	color: white;
 }
 
-#test1, 
-#test2, 
-#test3, 
-#test4 {
-	height: 650px;
-	text-align: top;
+#test1 {
+	height: 690px;
 	padding-top: 100px;
 }
+
+@media screen and (max-width: 600px) {
+	#test1 {
+		height: 590px;
+		padding-top: 0px;
+		margin-top: 70px !important;
+	}
+	.caption {
+		font-size: 1.90rem;
+	}
+	.description {
+		margin-top: 1.4rem;
+		font-size: 1.39rem;
+	}
+	.scroll-down-buton {
+		top: 50%;
+	}
+}
+
 #test1 {
-	position: relative;
+	/* position: relative;
 	top: 150px;
-	left: 0;
+	left: 0; */
 	/*z-index: -1;*/
+	margin-top: 100px;
 	background-image: url("../images/background-main.png");
 	background-size: cover;
 	background-position: center center;
@@ -78,6 +99,12 @@ nav {
 
 #test1 > p {
 	font-family: 'Oswald Light';
+}
+
+#test2, 
+#test3, 
+#test4 {
+	margin-top: 60px;
 }
 
 header {
@@ -157,4 +184,10 @@ div.nav-wrapper {
 	-webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.79);
 	-moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.79);
 	box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.79);
+}
+
+/* Cards*/
+
+.card-image {
+	padding: 15px;
 }

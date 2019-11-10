@@ -10,6 +10,6 @@ $(document).ready(function(){
     }); */
     $(document).on('click','.fa-arrow-alt-circle-down',function(){
       console.log($('i'));
-      $('html, body').animate({scrollTop: $('section#test2').offset().top }, 'slow');
+      $('html, body').animate({scrollTop: $('section#test2').offset().top - 120}, 'slow');
     });
 });
